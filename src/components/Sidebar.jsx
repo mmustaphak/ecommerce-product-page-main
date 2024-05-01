@@ -1,5 +1,5 @@
 import close from "../assets/icon-close.svg"
-const SideBar = ({CloseSidebar})=>{
+const Sidebar = ({CloseSidebar})=>{
     return(
         <aside className="fixed top-0 w-[65%] h-full p-4 bg-red-900">
             <button onClick={CloseSidebar}>
@@ -22,4 +22,4 @@ const SideBar = ({CloseSidebar})=>{
     )
 }
 
-export default SideBar
+export default Sidebar
