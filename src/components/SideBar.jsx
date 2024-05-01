@@ -1,8 +1,10 @@
 import close from "../assets/icon-close.svg"
-const SideBar = ()=>{
+const SideBar = ({CloseSidebar})=>{
     return(
         <aside className="fixed top-0 w-[65%] h-full p-4 bg-red-900">
-            <img src={close} alt="Close Sidebar" />
+            <button onClick={CloseSidebar}>
+                <img src={close} alt="Close Sidebar" />
+            </button>
             <ul className="mt-8 font-semibold">
                 <a href="">
                     <li>Collections</li>
