@@ -1,7 +1,8 @@
-export default function App() {
-  return (
-    <h1 className="text-3xl font-bold underline bg-light-grayish-blue">
-      Hello world!
-    </h1>
+import Nav from "./components/Nav.jsx"
+const App = ()=>{
+  return(
+    <Nav/>
   )
 }
+
+export default App
