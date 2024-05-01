@@ -11,7 +11,7 @@ const Nav = () => {
     const toggleSidebar = ()=>setIsOpenSidebar(oldIsOpenSidebar => !oldIsOpenSidebar)
     return (
         <>
-            <nav className="flex items-center justify-between px-4 py-3 border-4 border-dotted border-red-950">
+            <nav className="flex items-center justify-between px-4 py-3">
                 <div className="flex items-center">
                     <button onClick={toggleSidebar}>
                         <img src={menu} className="pr-3" alt="Menu" />
