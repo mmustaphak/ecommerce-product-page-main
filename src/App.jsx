@@ -1,7 +1,11 @@
 import Nav from "./components/Nav.jsx"
-const App = ()=>{
-  return(
-    <Nav/>
+import Main from "./components/Main.jsx"
+const App = () => {
+  return (
+    <>
+      <Nav />
+      <Main />
+    </>
   )
 }
 
