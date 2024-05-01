@@ -13,6 +13,16 @@ export default {
         "dark-grayish-blue": 'hsl(var(--dark-grayish-blue) / <alpha-value>)',
         "grayish-blue": 'hsl(var(--grayish-blue) / <alpha-value>)',
         "light-grayish-blue": 'hsl(var(--light-grayish-blue) / <alpha-value>)',
+      },
+      keyframes:{
+        slideInFromleft:{
+          '0%':{
+            transform : 'translateX(-100%)'
+          },
+          '100%':{
+            transform: 'translateX(0)'
+          }
+        },
       }
     }
   },
