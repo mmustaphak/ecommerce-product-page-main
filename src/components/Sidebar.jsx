@@ -1,7 +1,7 @@
 import close from "../assets/icon-close.svg"
 const Sidebar = ({ CloseSidebar }) => {
     return (
-        <aside className="fixed top-0 w-full h-full bg-black/75">
+        <aside className="fixed z-30 top-0 w-full h-full bg-black/75">
             <div className="animate-[0.3s_ease-out_0s_1_slideInFromleft] w-[65%] h-full p-4 bg-white">
                 <button onClick={CloseSidebar}>
                     <img src={close} alt="Close Sidebar" />
