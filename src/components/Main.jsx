@@ -1,5 +1,6 @@
 import product1 from "../assets/image-product-1.jpg"
-import arrow from "../assets/icon-next.svg"
+import next from "../assets/icon-next.svg"
+import previous from "../assets/icon-previous.svg"
 import plus from "../assets/icon-minus.svg"
 import minus from "../assets/icon-plus.svg"
 import cart from "../assets/icon-cart.svg"
@@ -7,14 +8,14 @@ const Main = () => {
     return (
         <main>
             <div className="relative">
-                <button className="absolute top-[50%] left-3 rotate-180 rounded-full py-2 px-[0.65rem] bg-white">
-                    <img src={arrow} alt="" />
+                <button className="absolute top-[50%] left-3 rounded-full py-2 px-[0.65rem] bg-white">
+                    <img src={previous} alt="" />
                 </button>
 
                 <img src={product1} />
 
                 <button className="absolute top-[50%] right-3 rounded-full py-2 px-[0.65rem] bg-white">
-                    <img src={arrow} alt="" />
+                    <img src={next} alt="" />
                 </button>
             </div>
 
