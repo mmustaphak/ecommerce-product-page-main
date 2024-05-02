@@ -9,13 +9,13 @@ const Main = () => {
         <main>
             <div className="relative">
                 <button className="absolute top-[50%] left-3 rounded-full py-2 px-[0.65rem] bg-white">
-                    <img src={previous} alt="" />
+                    <img src={previous} alt="Previous Image" />
                 </button>
 
                 <img src={product1} />
 
                 <button className="absolute top-[50%] right-3 rounded-full py-2 px-[0.65rem] bg-white">
-                    <img src={next} alt="" />
+                    <img src={next} alt="Next Image" />
                 </button>
             </div>
 
