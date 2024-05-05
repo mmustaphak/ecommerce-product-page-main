@@ -10,7 +10,7 @@ const ProductDetails = () => {
     const removeItem = ()=>setProductQuantity(oldProductQuantity => oldProductQuantity === 0 ? 0 : oldProductQuantity - 1)
 
     return (
-        <div className="px-3 pt-4 max-w-[31rem]">
+        <div className="px-3 pt-4 mx-auto max-w-[31rem]">
             <p className="text-xs font-bold text-orange">SNEAKER COMPANY</p>
             <h1 className="max-w-[300px] text-3xl font-bold mt-2 min-[650px]:text-4xl min-[650px]:max-w-[25rem]">Fall Limited Edition Sneakers</h1>
             <p className="mt-4 text-dark-grayish-blue">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer Sole, they'll withstand everything the weather can offer.</p>
