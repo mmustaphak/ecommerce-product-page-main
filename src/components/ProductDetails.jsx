@@ -6,9 +6,15 @@ const ProductDetails = () => {
 
     const [productQuantity, setProductQuantity] = useState(0)
 
-    const addItem = ()=>setProductQuantity(oldProductQuantity => oldProductQuantity + 1)
-    const removeItem = ()=>setProductQuantity(oldProductQuantity => oldProductQuantity === 0 ? 0 : oldProductQuantity - 1)
-
+    function editQuantity(isAdd) {
+        setProductQuantity(oldProductQuantity => {
+            if (isAdd) {
+                return oldProductQuantity + 1
+            } else {
+                return oldProductQuantity === 0 ? 0 : oldProductQuantity - 1
+            }
+        })
+    }
     return (
         <div className="px-3 pt-4 mx-auto max-w-[31rem]">
             <p className="text-xs font-bold text-orange">SNEAKER COMPANY</p>
@@ -24,11 +30,11 @@ const ProductDetails = () => {
 
             <div className="min-[650px]:grid grid-cols-6 gap-x-2">
                 <div className="flex justify-between w-full mt-4 p-4 rounded-md bg-light-grayish-blue min-[650px]:col-span-2">
-                    <button onClick={removeItem}>
+                    <button onClick={() => editQuantity(false)}>
                         <img src={plus} alt="Reduce quantity" />
                     </button>
                     <p className="font-bold">{productQuantity}</p>
-                    <button onClick={addItem}>
+                    <button onClick={() => editQuantity(true)}>
                         <img src={minus} alt="Add quantity" />
                     </button>
                 </div>
