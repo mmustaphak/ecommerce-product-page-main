@@ -6,7 +6,6 @@ import { useState } from "react"
 
 const Nav = () => {
     const [isOpenSidebar, setIsOpenSidebar] = useState(false)
-    console.log(isOpenSidebar)
     const toggleSidebar = () => setIsOpenSidebar(oldIsOpenSidebar => !oldIsOpenSidebar)
     return (
         <>
