@@ -25,15 +25,18 @@ const Carousel = () => {
     }
 
     const renderedThumbnails = [numbnail1, numbnail2, numbnail3, numbnail4].map((pic, index) => {
+        const selectProductImage = ()=>{
+            setCurrentImage(index)
+        }
         if (currentImage == index) {
             return (
-                <div key={pic} className="border-2 border-orange rounded-lg scale-90">
+                <div key={pic} onClick={selectProductImage} className="border-2 border-orange rounded-lg scale-90">
                     <img src={pic} className="rounded-md opacity-30" alt="Product Preview" />
                 </div>
             )
         } else {
             return(
-                <img key={pic} src={pic} className="rounded-md scale-90" alt="Product Preview" />
+                <img key={pic} onClick={selectProductImage} src={pic} className="rounded-md scale-90" alt="Product Preview" />
             )
         }
     })
