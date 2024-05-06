@@ -36,7 +36,7 @@ const Carousel = () => {
             )
         } else {
             return(
-                <img key={pic} onClick={selectProductImage} src={pic} className="rounded-md scale-90" alt="Product Preview" />
+                <img key={pic} onClick={selectProductImage} src={pic} className="rounded-md scale-90 hover:opacity-75" alt="Product Preview" />
             )
         }
     })
