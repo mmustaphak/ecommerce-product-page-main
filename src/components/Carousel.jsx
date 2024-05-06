@@ -24,12 +24,13 @@ const Carousel = () => {
         }
     }
 
-    const thumbnails = [numbnail1, numbnail2, numbnail3, numbnail4]
-    const renderedThumbnails = thumbnails.map(pic => {
+    const renderedThumbnails = [numbnail1, numbnail2, numbnail3, numbnail4].map(pic => {
         return (
             <img key={pic} src={pic} className="rounded-md scale-90" alt="Product Preview" />
         )
     })
+
+
 
     return (
         <div className="max-w-[25rem] mx-auto max-[650px]:relative">
