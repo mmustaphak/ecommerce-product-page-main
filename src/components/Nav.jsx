@@ -44,8 +44,8 @@ const Nav = () => {
                         </button>
                         <img src={avatar} className="max-h-[1.5rem] desktop:max-h-[2.5rem] rounded-full hover:desktop:border-2 hover:desktop:border-orange" alt="Image Avatar" />
                     </div>
-                    <div className={`${isCartOpen ? "absolute" : "hidden"} flex flex-col w-[92%] min-h-64 right2/4 -bottom-[475%] rounded-lg bg-white`}>
-                        <h2 className="px-4 py-4 font-semibold">Cart</h2>
+                    <div className={`${isCartOpen ? "absolute" : "hidden"} flex flex-col w-[92%] min-h-72 right2/4 -bottom-[460%] shadow-xl rounded-lg bg-white`}>
+                        <h2 className="pl-6 py-4 font-semibold">Cart</h2>
                         <hr />
                         <div className="m-auto">
                             <p className="font-semibold text-sm text-dark-grayish-blue">Your cart is empty.</p>
