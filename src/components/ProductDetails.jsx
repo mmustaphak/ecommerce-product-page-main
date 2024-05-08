@@ -18,9 +18,9 @@ const ProductDetails = () => {
     return (
         <div className="px-3 pt-4 mx-auto max-w-[31rem]">
             <p className="text-xs font-bold text-orange">SNEAKER COMPANY</p>
-            <h1 className="max-w-[300px] text-3xl font-bold mt-2 min-[650px]:text-4xl min-[650px]:max-w-[25rem]">Fall Limited Edition Sneakers</h1>
+            <h1 className="max-w-[300px] text-3xl font-bold mt-2 desktop:text-4xl desktop:max-w-[25rem]">Fall Limited Edition Sneakers</h1>
             <p className="mt-4 text-dark-grayish-blue">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer Sole, they'll withstand everything the weather can offer.</p>
-            <div className="flex justify-between mt-4 min-[650px]:flex-col">
+            <div className="flex justify-between mt-4 desktop:flex-col">
                 <div className="flex items-center">
                     <h1 className="text-[1.3rem] font-bold">$125.00</h1>
                     <p className="ml-4 px-2 py-1 font-bold text-orange rounded-lg bg-pale-orange">50%</p>
@@ -28,8 +28,8 @@ const ProductDetails = () => {
                 <p className="text-grayish-blue line-through text-sm">$250.00</p>
             </div>
 
-            <div className="min-[650px]:grid grid-cols-6 gap-x-2">
-                <div className="flex justify-between w-full mt-4 p-4 rounded-md bg-light-grayish-blue min-[650px]:col-span-2">
+            <div className="desktop:grid grid-cols-6 gap-x-2">
+                <div className="flex justify-between w-full mt-4 p-4 rounded-md bg-light-grayish-blue desktop:col-span-2">
                     <button onClick={() => editQuantity(false)}>
                         <img src={plus} alt="Reduce quantity" />
                     </button>

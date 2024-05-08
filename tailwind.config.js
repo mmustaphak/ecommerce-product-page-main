@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens:{
+        'desktop': '650px'
+      },
       colors:{
         orange: 'hsl(var(--orange) / <alpha-value>)',
         "pale-orange": 'hsl(var(--pale-orange) / <alpha-value>)',

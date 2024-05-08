@@ -45,14 +45,14 @@ const Carousel = () => {
 
     return (
         <div className="max-w-[25rem] mx-auto max-[650px]:relative">
-            <button onClick={() => moveImage(false)} className="absolute top-[50%] left-3 rounded-full py-2 px-[0.65rem] bg-white min-[650px]:hidden">
+            <button onClick={() => moveImage(false)} className="absolute top-[50%] left-3 rounded-full py-2 px-[0.65rem] bg-white desktop:hidden">
                 <img src={previous} alt="Previous Image" />
             </button>
 
-            <img className="max-h-[25rem] mx-auto min-[650px]:rounded-lg" src={productImages[currentImage]} />
-            <div className="hidden grid-cols-4 gap-4 mt-4 min-[650px]:grid">{renderedThumbnails}</div>
+            <img className="max-h-[25rem] mx-auto desktop:rounded-lg" src={productImages[currentImage]} />
+            <div className="hidden grid-cols-4 gap-4 mt-4 desktop:grid">{renderedThumbnails}</div>
 
-            <button onClick={() => moveImage(true)} className="absolute top-[50%] right-3 rounded-full py-2 px-[0.65rem] bg-white min-[650px]:hidden">
+            <button onClick={() => moveImage(true)} className="absolute top-[50%] right-3 rounded-full py-2 px-[0.65rem] bg-white desktop:hidden">
                 <img src={next} alt="Next Image" />
             </button>
         </div>
