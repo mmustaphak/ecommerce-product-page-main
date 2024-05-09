@@ -2,9 +2,10 @@ import menu from "../assets/icon-menu.svg"
 import logo from "../assets/logo.svg"
 import avatar from "../assets/image-avatar.png"
 import Sidebar from "./Sidebar.jsx"
+import Cart from "./Cart.jsx"
 import { useState } from "react"
 
-const Nav = () => {
+const Nav = ({CartQuantity , SetCartQuantity}) => {
     const [isOpenSidebar, setIsOpenSidebar] = useState(false)
     const [isCartOpen, setIsCartOpen] = useState(false)
     const toggleSidebar = () => setIsOpenSidebar(oldIsOpenSidebar => !oldIsOpenSidebar)
@@ -44,13 +45,7 @@ const Nav = () => {
                         </button>
                         <img src={avatar} className="max-h-[1.5rem] desktop:max-h-[2.5rem] rounded-full hover:desktop:border-2 hover:desktop:border-orange" alt="Image Avatar" />
                     </div>
-                    <div className={`${isCartOpen ? "absolute" : "hidden"} flex flex-col w-[92%] max-w-[21.5rem] h-[450%] max-h-60 right-4 -bottom-[400%] shadow-2xl rounded-lg bg-white desktop:top-16 desktop:max-w-[330px] desktop:max-h-48`}>
-                        <h2 className="pl-6 py-4 font-semibold">Cart</h2>
-                        <hr />
-                        <div className="m-auto">
-                            <p className="font-semibold text-sm text-dark-grayish-blue">Your cart is empty.</p>
-                        </div>
-                    </div>
+                    {isCartOpen && <Cart CartQuantity={CartQuantity}/>}
                 </div>
                 <hr />
             </nav>

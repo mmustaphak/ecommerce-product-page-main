@@ -2,7 +2,7 @@ import plus from "../assets/icon-minus.svg"
 import minus from "../assets/icon-plus.svg"
 import cart from "../assets/icon-cart.svg"
 import { useState } from "react"
-const ProductDetails = () => {
+const ProductDetails = ({SetCartQuantity}) => {
 
     const [productQuantity, setProductQuantity] = useState(0)
 
@@ -15,6 +15,11 @@ const ProductDetails = () => {
             }
         })
     }
+
+    const addToCart = ()=>{
+        SetCartQuantity(productQuantity)
+    }
+
     return (
         <div className="px-3 pt-4 mx-auto max-w-[31rem]">
             <p className="text-xs font-bold text-orange">SNEAKER COMPANY</p>
@@ -39,7 +44,7 @@ const ProductDetails = () => {
                     </button>
                 </div>
 
-                <button className="flex justify-center items-center col-span-4 mt-2 py-3 rounded-md font-bold text-white bg-orange w-full">
+                <button onClick={addToCart} className="flex justify-center items-center col-span-4 mt-2 py-3 rounded-md font-bold text-white bg-orange w-full">
                     <img src={cart} className="scale-75 pr-4" alt=" " />
                     Add to cart
                 </button>
