@@ -44,7 +44,7 @@ const Nav = () => {
                         </button>
                         <img src={avatar} className="max-h-[1.5rem] desktop:max-h-[2.5rem] rounded-full hover:desktop:border-2 hover:desktop:border-orange" alt="Image Avatar" />
                     </div>
-                    <div className={`${isCartOpen ? "absolute" : "hidden"} flex flex-col w-[92%] min-h-72 right2/4 -bottom-[460%] shadow-xl rounded-lg bg-white`}>
+                    <div className={`${isCartOpen ? "absolute" : "hidden"} flex flex-col w-[92%] max-w-[21.5rem] h-[450%] max-h-60 right-4 -bottom-[400%] shadow-2xl rounded-lg bg-white desktop:top-16 desktop:max-w-[330px] desktop:max-h-48`}>
                         <h2 className="pl-6 py-4 font-semibold">Cart</h2>
                         <hr />
                         <div className="m-auto">
@@ -60,3 +60,5 @@ const Nav = () => {
 }
 
 export default Nav
+
+//Trying to adjust the max-height of the cart
