@@ -45,7 +45,7 @@ const Nav = ({CartQuantity , SetCartQuantity}) => {
                         </button>
                         <img src={avatar} className="max-h-[1.5rem] desktop:max-h-[2.5rem] rounded-full hover:desktop:border-2 hover:desktop:border-orange" alt="Image Avatar" />
                     </div>
-                    {isCartOpen && <Cart CartQuantity={CartQuantity}/>}
+                    {isCartOpen && <Cart SetCartQuantity={SetCartQuantity} CartQuantity={CartQuantity}/>}
                 </div>
                 <hr />
             </nav>
