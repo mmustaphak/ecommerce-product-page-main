@@ -44,7 +44,7 @@ const ProductDetails = ({SetCartQuantity}) => {
                     </button>
                 </div>
 
-                <button onClick={addToCart} className="flex justify-center items-center col-span-4 mt-2 py-3 rounded-md font-bold text-white bg-orange w-full">
+                <button onClick={addToCart} className="flex justify-center items-center col-span-4 mt-2 py-3 shadow-[0px_0px_3px_orange] rounded-md font-bold text-white bg-orange w-full">
                     <img src={cart} className="scale-75 pr-4" alt=" " />
                     Add to cart
                 </button>
