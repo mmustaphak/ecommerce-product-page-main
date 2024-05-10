@@ -35,16 +35,16 @@ const ProductDetails = ({SetCartQuantity}) => {
 
             <div className="desktop:grid grid-cols-6 gap-x-2">
                 <div className="flex justify-between w-full mt-4 p-4 rounded-md bg-light-grayish-blue desktop:col-span-2">
-                    <button onClick={() => editQuantity(false)}>
+                    <button className="hover:opacity-75" onClick={() => editQuantity(false)}>
                         <img src={plus} alt="Reduce quantity" />
                     </button>
                     <p className="font-bold">{productQuantity}</p>
-                    <button onClick={() => editQuantity(true)}>
+                    <button className="hover:opacity-75" onClick={() => editQuantity(true)}>
                         <img src={minus} alt="Add quantity" />
                     </button>
                 </div>
 
-                <button onClick={addToCart} className="flex justify-center items-center col-span-4 mt-2 py-3 shadow-[0px_0px_3px_orange] rounded-md font-bold text-white bg-orange w-full">
+                <button onClick={addToCart} className="flex justify-center items-center col-span-4 mt-2 py-3 shadow-[0px_0px_3px_orange] rounded-md font-bold text-white bg-orange w-full hover:opacity-75">
                     <img src={cart} className="scale-75 pr-4" alt=" " />
                     Add to cart
                 </button>
