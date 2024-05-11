@@ -14,29 +14,29 @@ const Nav = ({ CartQuantity, SetCartQuantity }) => {
     return (
         <>
             <nav className="sticky top-0 z-20 max-w-[80rem] mx-auto bg-white desktop:w-[90%] desktop:max-w-[1200px]">
-                <div className="flex justify-between px-4 pt-4 pb-6 desktop:pb-0">
-                    <div className="flex items-center">
+                <div className="flex justify-between items-start px-4 pt-4 pb-6 desktop:pt-6 desktop:pb-0 desktop:min-h-[80px]">
+                    <div className="flex items-center mt-2 desktop:items-start">
                         <button className="desktop:hidden" onClick={toggleSidebar}>
                             <img src={menu} className="pr-3" alt="Menu" />
                         </button>
                         <a href=" ">
                             <img src={logo} alt="Brand logo" />
                         </a>
-                        <ul className="hidden box-content ml-6 text-sm text-dark-grayish-blue desktop:flex desktop:pt-3 desktop:min-h-[60px]">
-                            <a href=" " className="border-orange desktop:hover:border-b-4">
-                                <li className="mt-4">Collections</li>
+                        <ul className="hidden box-content ml-6 text-sm text-dark-grayish-blue desktop:flex desktop:min-h-[60px]">
+                            <a href=" " className="flex items-start border-orange desktop:hover:border-b-4">
+                                <li>Collections</li>
                             </a>
-                            <a href=" " className="ml-3 border-orange desktop:hover:border-b-4">
-                                <li className="mt-4">Men</li>
+                            <a href=" " className="ml-3 flex items-start border-orange desktop:hover:border-b-4">
+                                <li>Men</li>
                             </a>
-                            <a href=" " className="ml-3 border-orange desktop:hover:border-b-4">
-                                <li className="mt-4">Women</li>
+                            <a href=" " className="ml-3 flex items-start border-orange desktop:hover:border-b-4">
+                                <li>Women</li>
                             </a>
-                            <a href=" " className="ml-3 border-orange desktop:hover:border-b-4">
-                                <li className="mt-4">About</li>
+                            <a href=" " className="ml-3 flex items-start border-orange desktop:hover:border-b-4">
+                                <li>About</li>
                             </a>
-                            <a href=" " className="ml-3 border-orange desktop:hover:border-b-4">
-                                <li className="mt-4">Contact</li>
+                            <a href=" " className="ml-3 flex items-start border-orange desktop:hover:border-b-4">
+                                <li>Contact</li>
                             </a>
                         </ul>
                     </div>
