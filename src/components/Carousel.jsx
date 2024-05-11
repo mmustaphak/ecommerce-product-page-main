@@ -14,6 +14,7 @@ import { useState } from "react"
 const Carousel = () => {
 
     const [currentImage, setCurrentImage] = useState(0)
+    const [isOverlay, setIsOverlay] = useState(false)
 
     const productImages = [product1, product2, product3, product4]
 
@@ -24,6 +25,8 @@ const Carousel = () => {
             setCurrentImage(oldCurrentImage => oldCurrentImage === 0 ? 3 : oldCurrentImage - 1)
         }
     }
+
+    const toggleOverlay = () => setIsOverlay(oldIsOverlay => !oldIsOverlay)
 
     const renderedThumbnails = [numbnail1, numbnail2, numbnail3, numbnail4].map((pic, index) => {
         const selectProductImage = () => {
@@ -43,7 +46,6 @@ const Carousel = () => {
     })
 
 
-
     return (
         <>
             <div className="max-w-[25rem] mx-auto max-[650px]:relative">
@@ -51,19 +53,21 @@ const Carousel = () => {
                     <img src={previous} alt="Previous Image" />
                 </button>
 
-                <img className="max-h-[25rem] mx-auto desktop:rounded-lg" src={productImages[currentImage]} />
+                <img onClick={toggleOverlay} className="max-h-[25rem] mx-auto desktop:rounded-lg desktop:cursor-pointer" src={productImages[currentImage]} />
                 <div className="hidden grid-cols-4 gap-4 mt-4 desktop:grid">{renderedThumbnails}</div>
 
                 <button onClick={() => moveImage(true)} className="absolute top-[50%] right-3 rounded-full py-2 px-[0.65rem] bg-white desktop:hidden">
                     <img src={next} alt="Next Image" />
                 </button>
             </div>
-            <OverlayGallery 
+
+            {isOverlay && <OverlayGallery 
                 RenderedThumbnails={renderedThumbnails}
                 CurrentImage={currentImage}
                 ProductImages={productImages}
                 MoveImage={moveImage}
-            />
+                CloseOverlay={toggleOverlay}
+            />}
         </>
     )
 }
