@@ -13,7 +13,7 @@ const Nav = ({ CartQuantity, SetCartQuantity }) => {
 
     return (
         <>
-            <nav className="sticky top-0 z-20 max-w-[80rem] mx-auto bg-white desktop:w-[90%] desktop:max-w-[1200px]">
+            <nav className="sticky top-0 z-20 max-w-[80rem] mx-auto bg-white desktop:max-[1000px]:w-[96%] desktop:w-[90%] desktop:max-w-[1200px]">
                 <div className="flex justify-between items-start px-4 pt-4 pb-6 desktop:pt-6 desktop:pb-0 desktop:min-h-[80px]">
                     <div className="flex items-center mt-2 desktop:items-start">
                         <button className="desktop:hidden" onClick={toggleSidebar}>
