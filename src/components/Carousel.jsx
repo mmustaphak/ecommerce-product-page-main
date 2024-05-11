@@ -31,7 +31,7 @@ const Carousel = () => {
         }
         if (currentImage == index) {
             return (
-                <div key={pic} onClick={selectProductImage} className="border-2 border-orange rounded-lg scale-90">
+                <div key={pic} onClick={selectProductImage} className="border-2 border-orange rounded-lg scale-90 bg-white">
                     <img src={pic} className="rounded-md opacity-30" alt="Product Preview" />
                 </div>
             )
