@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react"
 import product1 from "../assets/image-product-1.jpg"
 import product2 from "../assets/image-product-2.jpg"
 import product3 from "../assets/image-product-3.jpg"
@@ -9,12 +10,24 @@ import numbnail4 from "../assets/image-product-4-thumbnail.jpg"
 import next from "../assets/icon-next.svg"
 import previous from "../assets/icon-previous.svg"
 import OverlayGallery from "./OverlayGallery.jsx"
-import { useState } from "react"
 
 const Carousel = () => {
 
     const [currentImage, setCurrentImage] = useState(0)
     const [isOverlay, setIsOverlay] = useState(false)
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+    useEffect(() => {
+        window.onresize = () => {
+            setWindowWidth(window.innerWidth)
+        }
+    }, [])
+    
+    useEffect(() => {
+        if (windowWidth < 650) {
+            setIsOverlay(false)
+        }
+    },[windowWidth])
 
     const productImages = [product1, product2, product3, product4]
 
@@ -26,7 +39,7 @@ const Carousel = () => {
         }
     }
 
-    const toggleOverlay = () => setIsOverlay(oldIsOverlay => !oldIsOverlay)
+    const toggleOverlay = () => windowWidth > 650 && setIsOverlay(oldIsOverlay => !oldIsOverlay)
 
     const renderedThumbnails = [numbnail1, numbnail2, numbnail3, numbnail4].map((pic, index) => {
         const selectProductImage = () => {
@@ -61,7 +74,7 @@ const Carousel = () => {
                 </button>
             </div>
 
-            {isOverlay && <OverlayGallery 
+            {isOverlay && <OverlayGallery
                 RenderedThumbnails={renderedThumbnails}
                 CurrentImage={currentImage}
                 ProductImages={productImages}
