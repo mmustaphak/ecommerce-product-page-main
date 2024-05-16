@@ -1,8 +1,8 @@
 import close from "../assets/icon-close.svg"
-const Sidebar = ({ CloseSidebar }) => {
+const Sidebar = ({ IsSideBarOpen , CloseSidebar }) => {
     return (
-        <aside className="fixed z-30 top-0 w-full h-full bg-black/75">
-            <div className="animate-[0.3s_ease-out_0s_1_slideInFromleft] w-[65%] h-full p-4 bg-white">
+        <aside className={`${IsSideBarOpen ? "bg-black/75" : "delay-500 -translate-x-full"} fixed z-30 top-0 w-full h-full `}>
+            <div className={`${IsSideBarOpen ? "animate-[slide-in_1s_ease-out] " : "animate-[slide-out_1s_ease-out] -translate-x-full"} w-[65%] h-full p-4 bg-white`}>
                 <button onClick={CloseSidebar}>
                     <img src={close} alt="Close Sidebar" />
                 </button>

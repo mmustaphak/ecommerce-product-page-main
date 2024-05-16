@@ -18,14 +18,22 @@ export default {
         "light-grayish-blue": 'hsl(var(--light-grayish-blue) / <alpha-value>)',
       },
       keyframes:{
-        slideInFromleft:{
-          '0%':{
-            transform : 'translateX(-100%)'
+        "slide-in":{
+          from:{
+            transform: 'translateX(-200%)'
           },
-          '100%':{
+          to:{
             transform: 'translateX(0)'
           }
         },
+        "slide-out":{
+          from:{
+            transform:'translateX(0)'
+          },
+          to:{
+            transform: 'translateX(-200%)'
+          }
+        }
       }
     }
   },

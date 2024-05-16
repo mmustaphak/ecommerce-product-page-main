@@ -52,7 +52,7 @@ const Nav = ({ CartQuantity, SetCartQuantity }) => {
                 </div>
                 <hr />
             </nav>
-            {isOpenSidebar && <Sidebar CloseSidebar={toggleSidebar} />}
+            <Sidebar IsSideBarOpen={isOpenSidebar} CloseSidebar={toggleSidebar}/>
         </>
     )
 }
