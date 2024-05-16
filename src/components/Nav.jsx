@@ -6,9 +6,9 @@ import Cart from "./Cart.jsx"
 import { useState } from "react"
 
 const Nav = ({ CartQuantity, SetCartQuantity }) => {
-    const [isOpenSidebar, setIsOpenSidebar] = useState(false)
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false)
     const [isCartOpen, setIsCartOpen] = useState(false)
-    const toggleSidebar = () => setIsOpenSidebar(oldIsOpenSidebar => !oldIsOpenSidebar)
+    const toggleSidebar = () => setIsSidebarOpen(oldIsSidebarOpen => !oldIsSidebarOpen)
     const toggleCart = () => setIsCartOpen(oldIsCartOpen => !oldIsCartOpen)
 
     return (
@@ -52,7 +52,7 @@ const Nav = ({ CartQuantity, SetCartQuantity }) => {
                 </div>
                 <hr />
             </nav>
-            <Sidebar IsSideBarOpen={isOpenSidebar} CloseSidebar={toggleSidebar}/>
+            <Sidebar IsSideBarOpen={isSidebarOpen} CloseSidebar={toggleSidebar}/>
         </>
     )
 }
