@@ -1,7 +1,10 @@
 import close from "../assets/icon-close.svg"
 const Sidebar = ({ IsSideBarOpen , CloseSidebar }) => {
+    const test = (e)=>{
+        e.currentTarget === e.target && CloseSidebar()
+    }
     return (
-        <aside className={`${IsSideBarOpen ? "bg-black/75" : "delay-500 -translate-x-full"} fixed z-30 top-0 w-full h-full `}>
+        <aside onClick={(e)=>test(e)} className={`${IsSideBarOpen ? "bg-black/75" : "delay-500 -translate-x-full"} fixed z-30 top-0 w-full h-full `}>
             <div className={`${IsSideBarOpen ? "animate-[slide-in_1s_ease-out] " : "animate-[slide-out_1s_ease-out] -translate-x-full"} w-[65%] h-full p-4 bg-white`}>
                 <button onClick={CloseSidebar}>
                     <img src={close} alt="Close Sidebar" />
