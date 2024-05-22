@@ -1,6 +1,25 @@
+import { loadStripe } from "@stripe/stripe-js"
 import productImg from "../assets/image-product-1.jpg"
 import trashBin from "../assets/icon-delete.svg"
+
+const stripePromise = loadStripe('pk_test_51PI2HkCqm73Nj11DKWZjVOJhXxYwHR66Gcs3pMmJ19j2pBOQ8UR36spRXyfNMyXiameRINR8WnApx3a2vKi29CX9001rcDF2lY')
+
 const Cart = ({ CartQuantity, SetCartQuantity, ToggleCart }) => {
+
+    
+
+    const handleClick = async (e)=>{
+        const stripe = await stripePromise;
+        const {error} = await stripe.redirectToCheckout({
+            lineItems: [{
+                price: "price_1PI33tCqm73Nj11DSSrsxlLj",
+                quantity: CartQuantity,
+            }],
+            mode: 'payment',
+            successUrl: document.location.href,
+            cancelUrl: document.location.href
+        })
+    }
 
     const resetCart = () => {
         SetCartQuantity(0)
@@ -31,7 +50,7 @@ const Cart = ({ CartQuantity, SetCartQuantity, ToggleCart }) => {
                                     <img src={trashBin} alt="Remove items from cart" />
                                 </button>
                             </div>
-                            <button className="w-full mt-4 py-2 font-semibold text-white rounded-lg bg-orange">Checkout</button>
+                            <button onClick={handleClick} role="link" className="w-full mt-4 py-2 font-semibold text-white rounded-lg bg-orange">Checkout</button>
                         </>
                     }
                 </div>
