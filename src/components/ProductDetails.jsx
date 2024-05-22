@@ -33,7 +33,7 @@ const ProductDetails = ({SetCartQuantity}) => {
                 <p className="text-grayish-blue line-through text-sm">$250.00</p>
             </div>
 
-            <div className="desktop:grid grid-cols-6 gap-x-2">
+            <div className="grid-cols-6 gap-x-2 desktop:grid">
                 <div className="flex justify-between w-full mt-4 p-4 rounded-md bg-light-grayish-blue desktop:col-span-2">
                     <button className="hover:opacity-75" onClick={() => editQuantity(false)}>
                         <img src={plus} alt="Reduce quantity" />

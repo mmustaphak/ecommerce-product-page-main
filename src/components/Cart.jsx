@@ -33,7 +33,7 @@ const Cart = ({ CartQuantity, SetCartQuantity, ToggleCart }) => {
                 <h2 className="pl-6 py-4 font-semibold">Cart</h2>
                 <hr />
                 <div className="flex flex-col justify-center w-full h-full px-4">
-                    {CartQuantity === 0 && <p className=" mt-16 self-center font-semibold text-sm text-dark-grayish-blue">Your cart is empty.</p>}
+                    {CartQuantity === 0 && <p className="self-center mt-16 font-semibold text-sm text-dark-grayish-blue">Your cart is empty.</p>}
                     {
                         CartQuantity > 0 &&
                         <>
