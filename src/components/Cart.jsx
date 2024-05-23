@@ -12,7 +12,7 @@ const Cart = ({ CartQuantity, SetCartQuantity, ToggleCart }) => {
         const stripe = await stripePromise;
         const {error} = await stripe.redirectToCheckout({
             lineItems: [{
-                price: "price_1PI33tCqm73Nj11DSSrsxlLj",
+                price: "price_1PJSPXCqm73Nj11DT8YFECwA",
                 quantity: CartQuantity,
             }],
             mode: 'payment',
