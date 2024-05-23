@@ -69,4 +69,4 @@ This Project has shown me a lot of areas I get to improve on. I'm looking forwar
 - Twitter - [@mmustaphak1](https://www.twitter.com/mmustaphak1)
 
 ## Acknowledgement
-I would like to thank my good friend and mentor Esin Ridollah for pushing me in the right direction and giving me the suggestion to add a stripe payment gateway to the project
+I would like to thank my good friend and mentor [@essinnation](https://x.com/esinnation) for pushing me in the right direction and giving me the suggestion to add a stripe payment gateway to the project
